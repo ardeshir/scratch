@@ -1,1 +1,4 @@
 # scratch
+
+## PATH=$PATH:.
+## run 
