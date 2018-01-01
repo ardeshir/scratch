@@ -1,0 +1,67 @@
+package main
+import "fmt"
+func main() {
+
+   x := []int{6,7,8,9,5}
+
+    fmt.Println(len(x))
+   
+   /* x[0] = 5
+      x[1] = 6
+      x[2] = 7
+      x[3] = 8
+      x[4] = 9
+   */
+   
+     // for i := 0; i < len(x) ; i++  {
+     for i, v := range x {
+        
+      fmt.Printf("%d\t%d\t = %v\n", i, v, x[i])
+    
+    }
+    
+    fmt.Println("Before the append() \n")
+    fmt.Println(x)
+    // slice the slice
+    fmt.Println(x[1:len(x)])
+    
+    x = append(x, 87, 80, 90, 100, 182)
+    
+    
+     fmt.Println("After append()\n")
+     fmt.Println(x)
+    // slice the slice
+    fmt.Println(x[1:len(x)])
+    
+    y := []int{1212, 12312, 346, 66}
+    x = append(x, y...)
+    
+    fmt.Println("After append(x, y...)\n")
+     fmt.Println(x)
+    // slice the slice
+    fmt.Println(x[1:len(x)])
+    j := 1
+    
+    for i := 1971 ; i <= 2017 ; i++   {
+        fmt.Printf("%v\t%d\n", j,i)
+        j++
+    }
+    
+    for i := 10; i <= 100; i++ {
+        
+        if i < 15 {
+           fmt.Printf("When %d divided by 4 the modulus is %d\n", i, i%4 )
+        } else if (i > 50) {
+            fmt.Printf("we're after 50 at %v\n", i)
+        } else {
+            fmt.Printf("we're after 14 at %v\n", i)
+        }
+    }
+
+ fmt.Printf("true && true  => %v\n", true && true) 
+ fmt.Printf("true && false => %v\n", true && false) 
+ fmt.Printf("true || true  => %v\n", true || true) 
+ fmt.Printf("true || false => %v\n", true || false) 
+ fmt.Printf("!true  \t\t=> %v\n", !true)
+ fmt.Printf("!false \t\t=> %v\n", !false)
+}
